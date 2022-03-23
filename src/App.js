@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Task1 from "./components/Task1/Task1";
-import Task2 from "./components/Task2/Task2";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home";
+import Task1 from "./pages/Task1";
+import Task2 from "./pages/Task2";
 
 function App() {
   return (
