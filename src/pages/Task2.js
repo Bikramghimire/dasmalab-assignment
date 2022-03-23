@@ -32,22 +32,18 @@ const Task2 = () => {
       <p>Task2</p>
       <label>Choose an issues: </label>
       <select id="issues" value={optionValue} onChange={handleSearch}>
-        {FBIssues
-          ? FBIssues.map((item) =>
-              item.labels.map((label) => {
-                if (!arr.includes(label.name)) {
-                  arr.push(label.name);
-                }
-              })
-            )
-          : null}
-        {arr != null
-          ? arr.map((label) => (
-              <option key={label} value={label}>
-                {label}
-              </option>
-            ))
-          : ""}
+        {FBIssues?.map((item) =>
+          item.labels.map((label) => {
+            if (!arr.includes(label.name)) {
+              arr.push(label.name);
+            }
+          })
+        )}
+        {arr?.map((label) => (
+          <option key={label} value={label}>
+            {label}
+          </option>
+        ))}
       </select>
       <Box
         sx={{
